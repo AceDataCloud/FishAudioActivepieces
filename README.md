@@ -8,7 +8,10 @@ Synthesize speech through Ace Data Cloud and retrieve an asynchronous Fish Audio
 
 In Activepieces 0.92.2+, open **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**. Enter `@acedatacloud/piece-fish-audio` and version `0.1.0`. Search for **Fish Audio by Ace Data Cloud** when adding a flow action, then check the Ace Data Cloud logo and both actions.
 
-Create a connection using an Ace Data Cloud API key with access to `/fish/tts` and `/fish/tasks`. Enter only the key, without `Bearer `. Keep it in the connection, never in a flow export. Check current [pricing](https://platform.acedata.cloud/models) and balance before synthesis.
+1. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_api_key). If you have no General application, choose **Initialize General Application**.
+2. Open a General application or an application with **Fish Audio** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
+3. Use the application's copy button, or choose **Manage Keys → Create** to create a separate key named `Activepieces Fish Audio`. Set expiry and usage limits as needed. If you restrict **Allowed APIs**, include both `/fish/tts` and `/fish/tasks`, then copy the key.
+4. Create an Activepieces connection and enter only the API key, without `Bearer `. A `platform-...` management token is not a generation API key. Keep the key in the connection, never in a flow export. Check current [pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_pricing) and balance before synthesis.
 
 ## First flow
 

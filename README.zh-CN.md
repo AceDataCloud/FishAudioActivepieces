@@ -8,7 +8,10 @@
 
 Activepieces 0.92.2+ 中进入 **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**，填写 `@acedatacloud/piece-fish-audio` 和版本 `0.1.0`。在流程中搜索 **Fish Audio by Ace Data Cloud**，核对 Ace Data Cloud Logo 和两个动作。
 
-创建连接时使用同时有 `/fish/tts` 与 `/fish/tasks` 权限的 Ace Data Cloud API Key。只填写 Key 本身，不加 `Bearer `；Key 留在连接中，不写入流程导出。合成前查看当前[价格](https://platform.acedata.cloud/models)与余额。
+1. 在 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_api_key) 注册或登录。若没有通用应用，点击 **Initialize General Application**。
+2. 打开通用应用或具备 **Fish Audio** 权限的应用。通用 Key 可访问账号已获授权的服务；专用 Key 仅限对应服务。
+3. 使用应用卡片的复制按钮，或通过 **Manage Keys → Create** 创建名为 `Activepieces Fish Audio` 的独立 Key，按需设置有效期与用量限制。若启用 **Allowed APIs**，应同时包含 `/fish/tts` 与 `/fish/tasks`，创建后复制 Key。
+4. 创建 Activepieces 连接，只填写 API Key 本身，不加 `Bearer `。`platform-...` 管理 Token 不是生成 API Key。Key 留在连接中，不写入流程导出。合成前查看当前[价格](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_pricing)与余额。
 
 ## 首次流程
 
@@ -31,7 +34,7 @@ Activepieces 0.92.2+ 中进入 **Platform Admin → Catalogue → Pieces → Ins
 | 400 | 核对文本、格式和声音 ID。 |
 | `pending` | 等待并查询同一任务 ID，不重跑合成。 |
 | 429 | 降低并发，避免自动重试付费请求。 |
-| 合成超时或 5xx | 先查请求历史，再考虑再次提交。 |
+| 合成超时或 5xx | 先查[请求历史](https://platform.acedata.cloud/console/usages?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_request_history)，再考虑再次提交。 |
 | `failed` 或任务不存在 | 检查任务 ID 和保留期限。 |
 
 Piece 只向 `https://api.acedata.cloud` 发送所选输入和 API Key，仅在终态返回媒体 URL，并过滤内部路由字段。[源码](https://github.com/AceDataCloud/FishAudioActivepieces) · [支持](https://github.com/AceDataCloud/FishAudioActivepieces/issues) · dev@acedata.cloud。
