@@ -34,7 +34,7 @@ An isolated Activepieces CE 0.92.2 instance accepted the build archive and ran *
 | 400 | Check text, format, and reference voice ID. |
 | `pending` | Wait and query the same task ID; do not rerun synthesis. |
 | 429 | Reduce concurrency and wait; avoid automatic paid retries. |
-| Synthesis timeout or 5xx | Inspect request history before another submission. |
+| Synthesis timeout or 5xx | Inspect [request history](https://platform.acedata.cloud/console/usages?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_request_history) before another submission. |
 | `failed` or missing task | Check the task ID and retention window. |
 
 The Piece sends selected inputs and the API key only to `https://api.acedata.cloud`. It exposes final media URLs and removes internal routing fields from task output. [Source](https://github.com/AceDataCloud/FishAudioActivepieces) · [Support](https://github.com/AceDataCloud/FishAudioActivepieces/issues) · dev@acedata.cloud.
