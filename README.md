@@ -8,7 +8,10 @@ Synthesize speech through Ace Data Cloud and retrieve an asynchronous Fish Audio
 
 In Activepieces 0.92.2+, open **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**. Enter `@acedatacloud/piece-fish-audio` and version `0.1.0`. Search for **Fish Audio by Ace Data Cloud** when adding a flow action, then check the Ace Data Cloud logo and both actions.
 
-Create a connection using an Ace Data Cloud API key with access to `/fish/tts` and `/fish/tasks`. Enter only the key, without `Bearer `. Keep it in the connection, never in a flow export. Check current [pricing](https://platform.acedata.cloud/models) and balance before synthesis.
+1. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_api_key). If you have no General application, choose **Initialize General Application**.
+2. Open a General application or an application with **Fish Audio** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
+3. Use the application's copy button, or choose **Manage Keys → Create** to create a separate key named `Activepieces Fish Audio`. Set expiry and usage limits as needed. If you restrict **Allowed APIs**, include both `/fish/tts` and `/fish/tasks`, then copy the key.
+4. Create an Activepieces connection and enter only the API key, without `Bearer `. A `platform-...` management token is not a generation API key. Keep the key in the connection, never in a flow export. Check current [pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_pricing) and balance before synthesis.
 
 ## First flow
 
@@ -31,7 +34,17 @@ An isolated Activepieces CE 0.92.2 instance accepted the build archive and ran *
 | 400 | Check text, format, and reference voice ID. |
 | `pending` | Wait and query the same task ID; do not rerun synthesis. |
 | 429 | Reduce concurrency and wait; avoid automatic paid retries. |
-| Synthesis timeout or 5xx | Inspect request history before another submission. |
+| Synthesis timeout or 5xx | Inspect [request history](https://platform.acedata.cloud/console/usages?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_request_history) before another submission. |
 | `failed` or missing task | Check the task ID and retention window. |
 
 The Piece sends selected inputs and the API key only to `https://api.acedata.cloud`. It exposes final media URLs and removes internal routing fields from task output. [Source](https://github.com/AceDataCloud/FishAudioActivepieces) · [Support](https://github.com/AceDataCloud/FishAudioActivepieces/issues) · dev@acedata.cloud.
+
+API requests verify HTTPS certificates and stay on `api.acedata.cloud`. Transport failures and HTTP errors are not retried automatically; inspect request history before resubmitting a creation. HTTPS proxy configuration is not supported by this transport.
+
+## Visual setup references
+
+![Copy a key or open Manage Keys: real redacted Ace console](docs/screenshots/get-api-key-en.png)
+![Create a dedicated key: real redacted Ace console](docs/screenshots/create-api-key-en.png)
+![Official Activepieces generic installation dialog](docs/screenshots/install-piece.png)
+
+References reused on 2026-10-18; [fixed sources and limits](docs/screenshots/onboarding-source.json). The installation picture is an official generic reference, not proof this Piece is in the shared catalog. After administrator installation, search the service name, select **by Ace Data Cloud**, and keep the raw API key in the action connection. Source PR, immutable npm release, official shared-catalog acceptance and first use are separate stages.
