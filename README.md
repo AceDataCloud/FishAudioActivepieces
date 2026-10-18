@@ -2,11 +2,11 @@
 
 Synthesize speech through Ace Data Cloud and retrieve an asynchronous Fish Audio task by the **same task ID**. The Piece has **Synthesize Fish Audio speech** and **Get Fish Audio task** actions. [中文指南](README.zh-CN.md)
 
-**Distribution:** Install `@acedatacloud/piece-fish-audio@0.1.0` as a custom Piece in your Activepieces instance. A public npm package does not automatically enter the shared Activepieces catalog.
+**Distribution:** Install `@acedatacloud/piece-fish-audio@0.1.1` as a custom Piece in your Activepieces instance. A public npm package does not automatically enter the shared Activepieces catalog.
 
 ## Install and connect
 
-In Activepieces 0.92.2+, open **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**. Enter `@acedatacloud/piece-fish-audio` and version `0.1.0`. Search for **Fish Audio by Ace Data Cloud** when adding a flow action, then check the Ace Data Cloud logo and both actions.
+In Activepieces 0.92.2+, open **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**. Enter `@acedatacloud/piece-fish-audio` and version `0.1.1`. Search for **Fish Audio by Ace Data Cloud** when adding a flow action, then check the Ace Data Cloud logo and both actions.
 
 1. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=fish_audio_activepieces_readme_api_key). If you have no General application, choose **Initialize General Application**.
 2. Open a General application or an application with **Fish Audio** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
