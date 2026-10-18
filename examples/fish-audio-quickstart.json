@@ -37,7 +37,7 @@
             "pieceName": "@acedatacloud/piece-fish-audio",
             "actionName": "synthesize_speech",
             "sampleData": {},
-            "pieceVersion": "0.1.0",
+            "pieceVersion": "0.1.1",
             "propertySettings": {
               "text": {
                 "type": "MANUAL"
@@ -74,7 +74,7 @@
               "pieceName": "@acedatacloud/piece-fish-audio",
               "actionName": "get_task",
               "sampleData": {},
-              "pieceVersion": "0.1.0",
+              "pieceVersion": "0.1.1",
               "propertySettings": {
                 "taskId": {
                   "type": "MANUAL"
