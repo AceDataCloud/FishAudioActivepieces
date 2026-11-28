@@ -6,7 +6,7 @@
 
 ## 安装与连接
 
-Activepieces 0.92.2+ 中进入 **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**，填写 `@acedatacloud/piece-fish-audio` 和版本 `0.1.3`。在流程中搜索 **Fish Audio by Ace Data Cloud**，核对 Ace Data Cloud Logo 和两个动作。
+Activepieces 0.92.2+ 中进入 **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**，填写 `@acedatacloud/piece-fish-audio` 和版本 `0.1.4`。在流程中搜索 **Fish Audio**，核对 Ace Data Cloud Logo 和两个动作。
 
 1. 在 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen) 注册或登录。若没有通用应用，点击 **Initialize General Application**。
 2. 打开通用应用或具备 **Fish Audio** 权限的应用。通用 Key 可访问账号已获授权的服务；专用 Key 仅限对应服务。
@@ -47,4 +47,4 @@ API 请求验证 HTTPS 证书，且仅访问 `api.acedata.cloud`。网络失败�
 ![创建独立 Key：真实脱敏 Ace 控制台](docs/screenshots/create-api-key-en.png)
 ![官方 Activepieces 通用安装弹窗](docs/screenshots/install-piece.png)
 
-2026-10-18 复用的真实/官方参考图，[固定来源与边界](docs/screenshots/onboarding-source.json)保留。安装图不是本 Piece 已被官方共享目录收录的证明。管理员安装后按服务名搜索并核对 **by Ace Data Cloud**；Key 只放动作连接。源码 PR、npm 发版、官方目录收录与真实首用分别验收。
+2026-10-18 复用的真实/官方参考图，[固定来源与边界](docs/screenshots/onboarding-source.json)保留。安装图不是本 Piece 已被官方共享目录收录的证明。管理员安装后按服务名搜索并核对 **Fish Audio** 和已安装的 `@acedatacloud/piece-fish-audio` 包；Key 只放动作连接。源码 PR、npm 发版、官方目录收录与真实首用分别验收。
