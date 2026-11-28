@@ -5,7 +5,7 @@ import { getTask } from './lib/actions/get-task';
 import { fishAudioAuth } from './lib/auth';
 
 export const fishAudio = createPiece({
-  displayName: 'Fish Audio by Ace Data Cloud',
+  displayName: 'Fish Audio',
   description: 'Synthesize Fish Audio speech and retrieve the same task through Ace Data Cloud.',
   logoUrl: 'https://raw.githubusercontent.com/AceDataCloud/FishAudioDify/4d11caa5b9a03d10758a219b6ab61826f5699722/_assets/icon.png',
   authors: ['Ace Data Cloud'],
