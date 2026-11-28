@@ -8,10 +8,10 @@ Synthesize speech through Ace Data Cloud and retrieve an asynchronous Fish Audio
 
 In Activepieces 0.92.2+, open **Platform Admin → Catalogue → Pieces → Install Piece → NPM Registry**. Enter `@acedatacloud/piece-fish-audio` and version `0.1.4`. Search for **Fish Audio** when adding a flow action, then check the Ace Data Cloud logo and both actions.
 
-1. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen). If you have no General application, choose **Initialize General Application**.
-2. Open a General application or an application with **Fish Audio** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
-3. Use the application's copy button, or choose **Manage Keys → Create** to create a separate key named `Activepieces Fish Audio`. Set expiry and usage limits as needed. If you restrict **Allowed APIs**, include both `/fish/tts` and `/fish/tasks`, then copy the key.
-4. Create an Activepieces connection and enter only the API key, without `Bearer `. A `platform-...` management token is not a generation API key. Keep the key in the connection, never in a flow export. Check current [pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen) and balance before synthesis.
+1. Register or sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen). The page prepares your **General Application** card automatically.
+2. Use the **General Application** card or a card with **Fish Audio** access. A General key can access the services your account is entitled to use; a service-specific key is limited to that service.
+3. Click the copy button beside **API KEY** on the application card, or choose **Manage Keys → Create** to create a separate key named `Activepieces Fish Audio`. Set expiry and usage limits as needed. If you restrict **Allowed APIs**, include both `/fish/tts` and `/fish/tasks`, then copy the key.
+4. Create an Activepieces connection and enter only the API key, without `Bearer `. A `platform-...` management token is not a generation API key. Keep the key in the connection, never in a flow export. Check current [pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen) before synthesis. If the application balance is low, click **Top Up** on its card.
 
 ## First flow
 
